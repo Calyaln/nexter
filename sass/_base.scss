@@ -34,13 +34,6 @@ body {
   line-height: 1.6;
 }
 
-h4 {
-  font-size: 1.9rem;
-  font-family: $font-display;
-  font-weight: 400;
-}
-// not working in the _typography.scss file
-
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
