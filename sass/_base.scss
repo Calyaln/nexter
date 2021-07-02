@@ -33,3 +33,23 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+
+h4 {
+  font-size: 1.9rem;
+  font-family: $font-display;
+  font-weight: 400;
+}
+// not working in the _typography.scss file
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  // instead of min-content we could have put auto, it just means it adapts the height to the content
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+  // 1140/8 = 142.5 => 14rem
+  // it's better to name lines rather then using the lines nb
+}
